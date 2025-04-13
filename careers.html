@@ -609,53 +609,65 @@
 
                 <!-- Right Column -->
                 <div class="careers-box p-4 rounded-4 col-md-6">
-                    <form action="https://formsubmit.co/varsha@thefounderslab.me" method="POST">
+                    <form action="https://formsubmit.co/varsha@thefounderslab.me" method="POST"
+                        enctype="multipart/form-data">
+                        <!-- Anti-spam & redirect options -->
                         <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://thefounderslab.me/thank-you.html">
+                        <input type="hidden" name="_template" value="table">
+
                         <div class="row g-3 mb-3">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="First Name" required>
+                                <input type="text" class="form-control" name="First Name" placeholder="First Name"
+                                    required>
                             </div>
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Last Name" required>
+                                <input type="text" class="form-control" name="Last Name" placeholder="Last Name"
+                                    required>
                             </div>
                         </div>
 
                         <div class="mb-3">
-                            <input type="email" class="form-control" placeholder="Email Address" required>
+                            <input type="email" class="form-control" name="Email Address" placeholder="Email Address"
+                                required>
                         </div>
 
                         <div class="mb-3">
-                            <input type="tel" class="form-control" placeholder="Phone Number">
+                            <input type="tel" class="form-control" name="Phone Number" placeholder="Phone Number">
                         </div>
 
                         <div class="mb-3">
-                            <input type="url" class="form-control" placeholder="LinkedIn Profile">
+                            <input type="url" class="form-control" name="LinkedIn Profile"
+                                placeholder="LinkedIn Profile">
                         </div>
 
                         <div class="mb-3">
-                            <select class="form-control" required>
+                            <select class="form-control" name="Role Applying For" required>
                                 <option value="" disabled selected>Role you’re applying for</option>
-                                <option value="digital-marketing">Digital Marketing & Social Media Intern</option>
-                                <option value="mna-associate">Legal Associate - M&A </option>
-                                <option value="legal-assistant">Legal Assistant – Corporate</option>
-                                <option value="legal-intern">Legal Intern</option>
+                                <option value="Digital Marketing & Social Media Intern">Digital Marketing & Social Media
+                                    Intern</option>
+                                <option value="Legal Associate - M&A">Legal Associate - M&A</option>
+                                <option value="Legal Assistant – Corporate">Legal Assistant – Corporate</option>
+                                <option value="Legal Intern">Legal Intern</option>
                             </select>
                         </div>
 
                         <div class="mb-3">
-                            <input type="url" class="form-control" placeholder="Tell us about yourself">
+                            <input type="text" class="form-control" name="Tell us about yourself"
+                                placeholder="Tell us about yourself">
                         </div>
 
                         <div class="mb-3">
                             <label for="resume" class="form-label">Attach Resume <span
                                     class="text-danger">*</span></label>
-                            <input type="file" class="form-control" id="resume" required>
+                            <input type="file" class="form-control" name="Resume" id="resume" required>
                         </div>
 
                         <div class="text-end mt-4">
                             <button type="submit" class="btn maroon-btn px-4 py-2">Submit Application</button>
                         </div>
                     </form>
+
                 </div>
 
             </div>
