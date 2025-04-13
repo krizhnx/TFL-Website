@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/*Nav*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  z-index: 99;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #000000
+}
+
+.container {
+  width: 100%;
+  align-content: center;  
+}
+
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgba(4, 0, 255, 0.15);
+  background-color: white;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #0e2431;
+  font-weight: 400;
+  font-size: 2rem;
+  padding: 0.45rem;
+}
+
+.navbar .nav-container {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+.navbar .menu-items a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  right: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+  margin-right: 80px;
+}
+
+.nav-container .hamburger-lines {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 27%;
+  right: 20px;
+  z-index: 2;
+  margin-right: 80px;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #0e2431;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 100px;
+  background-color: white;
+  height: 100vh;
+  transform: translate(-130%);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+  z-index: 1000
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.navbar .menu-items.full-width {
+  transform: translateX(0);
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.logo {
+  color: #0e2431;
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+/* .nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
+ */
+
+.navbar-hidden {
+  transform: translateY(-100%);
+  transition: transform 0.3s;
+}
+
+.fixed-navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Add the following style to prevent scrolling when the menu is open */
+.fixed-navbar.menu-open {
+  overflow: hidden;
+}
+
+.lg{
+  display:inline-block;
+}
+
+.sm{
+  display:none;
+}
+
+
+/*Responsive*/
+
+@media only screen and (max-width: 768px) {
+    .navbar .menu-items {
+        padding-top: 80px; /* Adjust the padding for smaller screens */
+        transform: translate(-100%);
+    }
+
+    .logo {
+        margin-left: 20px; /* Adjust the margin for smaller screens */
+    }
+
+    .nav-container .hamburger-lines {
+        margin-right: 20px;
+    }
+
+    .nav-container .checkbox {
+        margin-right: 20px;
+    }
+
+    .nav-container input[type="checkbox"]:checked~.menu-items {
+        transform: translateX(0%);
+    }
+
+    .navbar .menu-items li {
+        font-size: 1.5rem; /* Decrease the font size for smaller screens */
+    }
+
+    .lg{
+      display:none;
+    }
+
+   .sm{
+      display:inline-block;
+    }
+
+    
+}
+
+/* Add styles for the active menu item */
+.menu-items li a.active {
+  color: #0c2846; /* Change to your desired highlight color */
+  font-weight: bold;
+}
+
+
+/*End Nav*/
+
